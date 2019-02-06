@@ -16,12 +16,13 @@ public class Truck extends Car {
 
     @Override
     public double getAverageMileage() {
-        double averageMileage = super.getAverageMileage();
-        if (getIsAirConditionOn()) {
-            averageMileage = averageMileage + 1.6;
-        }
-        averageMileage = averageMileage - ((getLoadWeight() / 100) * 0.5);
 
-        return averageMileage;
+        double result = averageMileage;
+        double mileageFromLoadWeight = ((getLoadWeight() / 100) * 0.5);
+        result  = result + mileageFromLoadWeight;
+        if (getIsAirConditionOn()) {
+          return result + 1.6;
+        }
+        return result;
     }
 }

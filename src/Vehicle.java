@@ -13,7 +13,7 @@ public class Vehicle {
     /**
      * Average Mileage f.g 5.5l/100km
      */
-    protected double averageMileage;
+    protected final double averageMileage;
 
     public Vehicle(String name, int fuelCapacity, double averageMileage) {
         this.name = name;
